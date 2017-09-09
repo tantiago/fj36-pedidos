@@ -32,6 +32,7 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
             <set-property propertyName="http.status" value="202" doc:name="Property"/>
         </response>
         <scatter-gather doc:name="Scatter-Gather">
+            <custom-aggregation-strategy class="SimpleResponseStrategy"/>
             <flow-ref name="ebook_flow" doc:name="ebook_flow"/>
             <flow-ref name="financeiro_flow" doc:name="financeiro_flow"/>
         </scatter-gather>
